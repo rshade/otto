@@ -12,5 +12,5 @@ depend:
 source.go: underscore.js depend
 	go-bindata -o source.go -pkg underscore $(UNDERSCORE_JS)
 	gofmt -w source.go
-	head -4 $< >> $@
-	mv $< ..
+	head -4 $(UNDERSCORE_JS) >> $@
+	mv $(UNDERSCORE_JS) ..

@@ -45,5 +45,6 @@ func Disable() {
 
 // Source returns the underscore source.
 func Source() string {
-	return string(underscore())
+	src,_ := AssetString("underscore.js")
+	return string(src)
 }
