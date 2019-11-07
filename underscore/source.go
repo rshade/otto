@@ -84,7 +84,7 @@ func underscoreJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "underscore.js", size: 58319, mode: os.FileMode(0664), modTime: time.Unix(1573152123, 0)}
+	info := bindataFileInfo{name: "underscore.js", size: 58319, mode: os.FileMode(0664), modTime: time.Unix(1573164982, 0)}
 	a := &asset{bytes: bytes, info: info, digest: [32]uint8{0x3b, 0x8d, 0x7b, 0xf4, 0x49, 0xfc, 0xcd, 0xa6, 0xce, 0x94, 0xf6, 0x1, 0x36, 0xf1, 0xa9, 0xf1, 0xc1, 0x74, 0xba, 0x1d, 0x2f, 0x9d, 0x26, 0x69, 0x5b, 0x84, 0x3a, 0x52, 0x5d, 0x61, 0xfb, 0xc7}}
 	return a, nil
 }
@@ -269,3 +269,7 @@ func _filePath(dir, name string) string {
 	canonicalName := strings.Replace(name, "\\", "/", -1)
 	return filepath.Join(append([]string{dir}, strings.Split(canonicalName, "/")...)...)
 }
+//     Underscore.js 1.9.1
+//     http://underscorejs.org
+//     (c) 2009-2018 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+//     Underscore may be freely distributed under the MIT license.

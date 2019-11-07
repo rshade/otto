@@ -1,13 +1,16 @@
 .PHONY: source
 DEPEND=github.com/kevinburke/go-bindata/...
+UNDERSCORE_JS='underscore.js'
 
 source: source.go
 
 underscore.js:
-	curl -kL http://underscorejs.org/underscore.js > $@
+	curl -kL http://underscorejs.org/underscore.js > $(UNDERSCORE_JS)
 depend: 
 	go get $(DEPEND)
+
 source.go: underscore.js depend
-	go-bindata -f underscore -p underscore -u true < $< 2>/dev/null | grep -v '^//' | gofmt > $@
+	go-bindata -o source.go -pkg underscore $(UNDERSCORE_JS)
+	gofmt -w source.go
 	head -4 $< >> $@
 	mv $< ..
